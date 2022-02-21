@@ -52,6 +52,14 @@ export default [
     plugins: basePlugins,
   },
   {
+    input: 'dist/playwright-label.js',
+    output: {
+      file: 'dist/playwright-label.cjs',
+      format: 'cjs',
+    },
+    plugins: basePlugins,
+  },
+  {
     input: 'dist/puppeteer.js',
     output: {
       file: 'dist/puppeteer.cjs',
@@ -77,6 +85,19 @@ export default [
     input: 'dist/role-selector.js',
     output: {
       file: 'dist/role-selector.eval.js',
+      format: 'iife',
+      globals: {
+        crypto: 'crypto',
+      },
+      plugins: [iifeEvalOutputPlugin()],
+    },
+    plugins: [...basePlugins, ...evalPlugins],
+  },
+  // IIFE eval (injected)
+  {
+    input: 'dist/label-selector.js',
+    output: {
+      file: 'dist/label-selector.eval.js',
       format: 'iife',
       globals: {
         crypto: 'crypto',

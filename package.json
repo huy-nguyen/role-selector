@@ -24,6 +24,10 @@
       "import": "./dist/playwright.js",
       "types": "./dist/playwright-test.d.ts"
     },
+    "./label-playwright-test": {
+      "require": "./dist/playwright-label.cjs",
+      "import": "./dist/playwright-label.js"
+    },
     "./puppeteer": {
       "require": "./dist/puppeteer.cjs",
       "import": "./dist/puppeteer.js",
