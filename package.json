@@ -61,8 +61,7 @@
     "test:jest-playwright": "jest -c test/integration/jest-playwright/jest.playwright.config.js",
     "test:jest-puppeteer": "jest -c test/integration/jest-puppeteer/jest.puppeteer.config.js",
     "test:playwright": "ts-node test/integration/playwright/test.ts",
-    "test:puppeteer": "ts-node test/integration/puppeteer/test.ts",
-    "prepare": "npm run build && npm run test"
+    "test:puppeteer": "ts-node test/integration/puppeteer/test.ts"
   },
   "peerDependencies": {
     "@playwright/test": "*",
