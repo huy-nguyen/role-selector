@@ -1,7 +1,5 @@
 import { configure, queryAllByLabelText } from '@testing-library/dom';
 
-console.log("in label-selector script")
-
 configure({
   computedStyleSupportsPseudoElements: true,
 });
@@ -19,8 +17,6 @@ const labelableTagNames = new Set([
 ]);
 
 function queryAll(root: Element | Document, selector: string) {
-
-  console.log("selector", selector)
   const rootElement =
     root instanceof Document ? root.documentElement : (root as HTMLElement);
 
