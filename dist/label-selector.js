@@ -1,5 +1,4 @@
 import { configure, queryAllByLabelText } from '@testing-library/dom';
-console.log("in label-selector script");
 configure({
     computedStyleSupportsPseudoElements: true,
 });
@@ -15,7 +14,6 @@ const labelableTagNames = new Set([
     'TEXTAREA',
 ]);
 function queryAll(root, selector) {
-    console.log("selector", selector);
     const rootElement = root instanceof Document ? root.documentElement : root;
     const unfilteredElems = queryAllByLabelText(rootElement, selector, {
         exact: false,
